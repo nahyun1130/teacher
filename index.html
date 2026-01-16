@@ -3,32 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME</title>
-    <link rel="stylesheet" href="css/common.css">
+    <title>HOOPSTUDIO</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="robots" content="All">
+    <meta name="Yeti" content="index, follow">
+    <meta name="Yeti" content="All">
+    <meta name="googlebot" content="All">
+    <meta name="googlebot" content="index, follow">
+    <meta name="daumoa" content="All">
+    <meta name="daumoa" content="index, follow">
+    <meta name="title" content="훕스튜디오, hoopstudio">
+    <meta name="description" content="사진,영상 제작 전문 스튜디오 HOOP! 특별한 순간의 감동을 빛과 프레임 속에 담아 소중한 추억을 특별한 작품으로 기록합니다.">
+    <meta name="keywords"
+        content="훕스튜디오, hoopstudio, 대구스튜디오, 스튜디오, 포토스튜디오, 사진관, 대구사진관, 증명사진, 프로필사진, 제품촬영, 영상촬영, 영상편집, 대구영상촬영, 영상스튜디오, 홍보영상촬영, 대구홍보영상촬영, 대구웨딩, 웨딩DVD, 본식DVD, 웨딩스튜디오, 촬영">
+    <meta name="author" content="hoopstudio">
+    <meta name="content-language" content="kr">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="훕스튜디오 (Hoopstudio)">
+    <meta property="og:title" content="훕스튜디오 (Hoopstudio)">
+    <meta property="og:description" content="사진·영상 전문 스튜디오">
+    <meta property="og:url" content="https://훕스튜디오.com">
+    <meta property="og:image" content="https://훕스튜디오.com/images/hoopthumnail.png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/hoop.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/hoop.js" defer></script>
 </head>
 <body>
-    <div class="intro">
-        <section class="teacher">
-            <h1>TEACHER</h1>
-            <div class="button">
-                <a href="teacher.html" target="_blank">CLICK</a>
+     <div class="video-wrapper" id="videoMask">
+        <video autoplay muted loop playsinline>
+            <source src="video/mainvideo.mp4" loop autoplay type="video/mp4" />
+        </video>
+    </div>
+    <div class="content">
+        <h1 class="logo"><a href="#"></a></h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#"><span>project</span></a></li>
+                <li><a href="#"><span>option</span></a></li>
+                <li><a href="#"><span>Q&A</span></a></li>
+                <li><a href="#"><span>contact</span></a></li>
+            </ul>
+        </nav>
+        <section class="main-text">
+            <div class="inner">
+                <h3>"순간을 이어 <strong>기억</strong>을 만든다"</h3>
+                <h3>기억은 흐르지만, 기록은 남습니다.</h3>
+                <h3>당신의 소중한 시간을 함께 담습니다.</h3>
+                <h4>- HOOP STUDIO -</h4>
             </div>
         </section>
-        <section class="hoop">
-            <div class="edge">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+       <div class="menusection">
+            <section class="project">
+                
+            </section>
+            <section class="option">
+
+            </section>
+            <section class="qanda">
+
+            </section>
+            <section class="contact">
+
+            </section>
+       </div>
+        <footer class="footer">
+            <div class="footertext">
+                <div class="flogo">
+                    <img src="images/flogo.png" alt="hoop">
+                </div>
+                <ul>
+                    <li>HOOP STUDIO</li>
+                    <li>김나현</li>
+                    <li>053-216-0206</li>
+                    <li>KB 801301-01-794650</li>
+                </ul>
+                <div class="add">
+                    <p><a href="#">개인정보처리방침</a><a href="#">회사소개</a></p>
+                    <p>주소 대구광역시 남구 양지로 107 3층 hoop studio</p>
+                    <p>copyright &copy; hoop studio. All right reserved. Design by nahyun</p>
+                    <ul class="sns">
+                       <li><a href="#">INSTAGRAM</a></li> 
+                       <li><a href="#">YOUTUBE</a></li> 
+                    </ul>
+                </div>
             </div>
-            <h1>HOOP STUDIO</h1>
-            <div class="button">
-                <a href="hoopstudio.html" target="_blank">CLICK</a>
-            </div>
-        </section>
+        </footer>
     </div>
 </body>
 </html>

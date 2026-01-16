@@ -4,7 +4,12 @@
     font-family: 'title';
     src: url('../fonts/Aboreto-Regular.ttf');
 }
-
+@font-face {
+    font-family: 'OngleIpSeaBreeze';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/Ownglyph_the_sea_breeze-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
 /* common */
 .button>a {
     display: inline-block;

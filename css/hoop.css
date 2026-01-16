@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+strong {
+    color: #cf0505;
+    font-weight: normal;
+}
+section {
+    height: 100vh;
+    padding: 3rem 0;
+}
+::selection {
+    background-color: #111;
+    color: #fff;
+}
+
+strong::selection {
+    background-color: #fff;
+    color: #111;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #111;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+section {
+    width: 100%;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    background: #f7f7f7;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100vh;
+
+}
+
+video {
+    mask-image: url('../images/hooptext.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 50%;
+    -webkit-mask-image: url('../images/hooptext.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: all 1.5s ease-out;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all .5s;
+}
+
+.content .logo {
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    top: 30px;
+    left: 50px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    background: url('../images/h/hoopww.png')no-repeat left center/contain;
+}
+
+.content .logo a {
+    font-family: 'title';
+    font-size: 2rem;
+    display: block;
+    padding-left: 60px;
+    background: linear-gradient(50deg,
+            #ffcdcd 15%,
+            #ffffe1 30%,
+            #fff 60%, #d0ffe8 80%);
+    background-clip: text;
+    background-size: 200% 200%;
+    color: transparent;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.content .logo img {
+    width: 60px;
+    filter: invert(95%);
+}
+
+.menu {
+    font-family: 'title';
+    position: fixed;
+    max-width: 600px;
+    top: 30px;
+    right: 70px;
+    font-size: 1.3rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 0 15px;
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+}
+
+.menu ul li a span {
+    display: block;
+    text-align: center;
+    transition: all .3s;
+}
+
+.menu ul li:hover a span {
+    transform: translateY(-25px);
+}
+.menu ul li.on a span {
+    transform: translateY(-25px);
+} 
+.menu ul li a span::after {
+    font-family: 'OngleIpSeaBreeze';
+    display: block;
+    text-align: center;
+}
+
+.menu ul li:nth-child(1) a span::after {
+    content: '프로젝트';
+}
+
+.menu ul li:nth-child(2) a span::after {
+    content: '상품안내';
+}
+
+
+.menu ul li:nth-child(3) a span::after {
+    content: '자주하는질문';
+}
+.menu ul li:nth-child(4) a span::after {
+    content: '연락하기';
+}
+
+.inner {
+    width: 80%;
+    margin: 100vh auto 100px;
+}
+.inner h3:nth-child(1) {
+    font-family: 'OngleIpSeaBreeze';
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+.inner h3 {
+    text-align: center;
+    font-family: 'Paperozi';
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.inner h4 {
+    font-family: 'title';
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.footer {
+    font-family: 'Paperozi';
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem 0;
+    backdrop-filter: blur(10px);
+    color: #969696;
+}
+
+.footer .footertext {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .flogo {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer img {
+    width: 120px;
+    object-fit: contain;
+    filter: invert(60%);
+}
+
+.footer h1 {
+    font-family: 'title';
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.footer .sns {
+    display: flex;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer a {
+    padding: 0 15px 0 0;
+}
