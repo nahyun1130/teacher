@@ -117,7 +117,7 @@ strong::selection {
     height: 50px;
     object-fit: contain;
 }
-body, html {
+body {
     overflow-x: hidden;
 }
 /* popup ===================== */
