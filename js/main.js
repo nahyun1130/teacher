@@ -70,7 +70,7 @@ $(function () {
     const portfolioData = [
         {
             title: '박규리 포트폴리오',
-            link: 'https://rriiweb.github.io/portfolio/',
+            link: 'https://9yur1park.github.io/portfolio/',
             img: 'images/박규리.png'
         },
         {
