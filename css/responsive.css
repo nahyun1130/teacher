@@ -1,0 +1,368 @@
+@media screen and (max-width : 1500px) {
+    html {
+        font-size: 15px;
+    }
+
+    .portfolio-thumb {
+        gap: 20px;
+    }
+
+    .popupbox .introduce-box .right .box h4 {
+        font-size: 1.8rem;
+    }
+
+    .popupbox .introduce-box .right .box .boxright {
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width : 1138px) {
+    .popupbox .popup {
+        padding: 2rem;
+    }
+
+    .popupbox .introduce-box .right .box {
+        flex-direction: column;
+    }
+
+    .popupbox .introduce-box .right .box:nth-child(1) {
+        padding: 1rem;
+    }
+
+    .popupbox .introduce-box .right .box>* {
+        width: 100%;
+    }
+
+    .popupbox .introduce-box .right .box .boxright {
+        border: none;
+        border-top: 2px solid #222;
+        display: flex;
+    }
+
+    .popupbox .introduce-box .right .box {
+        font-size: 1rem;
+    }
+
+    .popupbox .introduce-box .right .box .change {
+        line-height: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .popupbox .introduce-box .right .box .boxleft>* {
+        display: flex;
+    }
+
+    .popupbox .introduce-box .right .box .boxleft h4,
+    .popupbox .introduce-box .right .box .boxright h4 {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    html {
+        font-size: 13px;
+    }
+
+    .www .inner {
+        width: 85%;
+    }
+
+    .www-title h2 {
+        font-size: 4rem;
+    }
+
+    .www-title .w::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 886px) {
+    .popupbox .introduce-box {
+        position: relative;
+    }
+
+    .popupbox .introduce-box .left {
+        height: 300px;
+    }
+
+    .popupbox .introduce-box .right .box:nth-child(1) {
+        width: 29%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .popupbox .introduce-box .right .box .boxleft>* {
+        align-items: center;
+    }
+
+    .popupbox .introduce-box .right .box .boxleft h4,
+    .popupbox .introduce-box .right .box .boxright h4 {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+    }
+
+    .www .inner {
+        width: 100%;
+    }
+
+    .www-title {
+        gap: 80px;
+        padding: 1rem;
+        padding-left: 4rem;
+    }
+
+    .wtitle,
+    .wtext {
+        text-align: center;
+    }
+
+    .why,
+    .what,
+    .welcome {
+        padding: 4rem 0;
+    }
+
+    .why {
+        flex-direction: column;
+    }
+
+    .why>* {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .why .right a {
+        padding-left: 0;
+    }
+
+    .ball {
+        margin: 1rem auto;
+    }
+
+    .why .right .imgbox {
+        max-width: 600px;
+        padding-top: 50%;
+        margin: 1rem auto;
+    }
+
+    .cardbox {
+        width: 85%;
+        margin: 20px auto;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .cardbox .card {
+        width: 85%;
+        margin: 0px auto;
+    }
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    .welcome>* {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .welcome .left {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width : 716px) {
+    html {
+        font-size: 11px;
+    }
+
+    .www-title {
+        gap: 50px;
+    }
+
+    .why>* {
+        width: 85%;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media screen and (max-width : 620px) {
+    .popupbox .introduce-box {
+        flex-direction: column;
+    }
+
+    .popupbox .introduce-box .left {
+        width: 40%;
+        height: 200px;
+    }
+
+    .popupbox .introduce-box .right .box:nth-child(1) {
+        width: 55%;
+        left: auto;
+        right: 0;
+        bottom: auto;
+        top: 0;
+    }
+
+    .popupbox .introduce-box .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width : 510px) {
+    .www-title {
+        gap: 20px;
+    }
+
+    .www-title {
+        padding-left: 1rem;
+    }
+
+    .why,
+    .what,
+    .welcome {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width : 465px) {
+    .popupbox .introduce-box .left {
+        height: 150px;
+    }
+    header {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid #222;
+    }
+
+    .link {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .title {
+        height: 70vh;
+    }
+
+    .portfolio-thumb a {
+        width: 100%;
+        padding-top: 55.4%;
+    }
+
+    .portfolio-list>* {
+        width: 48%;
+    }
+
+    br {
+        display: block;
+    }
+
+    @keyframes aa {
+        0% {
+            left: 45%;
+        }
+
+        100% {
+            left: 15%;
+        }
+    }
+
+    @keyframes hh {
+        0% {
+            top: 0;
+            left: 20%;
+        }
+
+        100% {
+            top: 50%;
+            left: 29%;
+        }
+    }
+
+    @keyframes yy {
+        0% {
+            top: 5%;
+            transform: rotate(180deg);
+        }
+
+        100% {
+            top: 50%;
+            right: 42%;
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes uu {
+        0% {
+            top: 100%;
+            left: 45%;
+        }
+
+        100% {
+            top: 50%;
+            left: 58%
+        }
+    }
+
+    @keyframes nn {
+        0% {
+            right: 0;
+        }
+
+        100% {
+            right: 13%;
+        }
+    }
+
+    .www-title {
+        flex-direction: column;
+    }
+
+    .www-title h2 {
+        font-size: 3.2rem;
+    }
+
+    .www-title .sub {
+        font-size: 1.3rem;
+    }
+
+    .why .right a {
+        width: 120px;
+    }
+
+    .view-toggle button img {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width : 390px) {
+    html {
+        font-size: 10px;
+    }
+    .popupbox .popup {
+        border-radius: 10px;
+    }
+    .popupbox .introduce-box .right .box .boxleft>* {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .popupbox .introduce-box .right .box .boxright {
+        flex-direction: column;
+    }
+    .popupbox .introduce-box .right .box .boxleft h4, .popupbox .introduce-box .right .box .boxright h4 {
+        width: 100%;
+    }
+    .wtitle {
+        font-size: 1.5rem;
+    }
+
+    .www .inner {
+        margin: 50px auto;
+    }
+}

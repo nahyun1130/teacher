@@ -1,0 +1,831 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'name';
+    src: url('../fonts/Audiowide-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cafe24ProSlim';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+::selection {
+    background-color: #FD2D2D;
+    color: #fff;
+}
+strong::selection {
+    background-color: #fff;
+    color: #FD2D2D;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FD2D2D;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
+.cursor {
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+}
+.cursor img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+body, html {
+    overflow-x: hidden;
+}
+/* popup ===================== */
+.popupbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+.popupbox .popup {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #f2f2f2;
+    padding: 3rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.popupbox  .introduce-text {
+    display: flex;
+    justify-content: space-between;
+}
+.popupbox h2 {
+    font-family: 'name';
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.popupbox  .introduce-text .button {
+    font-family: 'Paperozi';
+    font-size: 2rem;
+    cursor: pointer;
+}
+.popupbox .introduce-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.popupbox .introduce-box .left {
+    width: 30%;
+    border: 2px solid #222;
+}
+.popupbox .introduce-box .left img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popupbox .introduce-box .right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.popupbox .introduce-box .right .box {
+    font-family: 'Paperozi';
+    border: 2px solid #222;
+    display: flex;
+    font-size: 1.2rem;
+}
+.popupbox .introduce-box .right .box:nth-child(1) {
+    padding: 2rem;
+    justify-content: center;
+}
+.popupbox .introduce-box .right .box .change {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    position: relative;
+    height: 3rem;
+    overflow: hidden;
+}
+.change span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: rise 0.4s forwards;
+}
+@keyframes rise {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.popupbox .introduce-box .right .box .change h3 {
+    position: absolute;
+    width: 100%;
+}
+.popupbox .introduce-box .right .box  > *{
+    width: 50%;
+}
+.popupbox .introduce-box .right .box .boxleft > * {
+    padding: 1rem;
+    border-bottom: 2px solid #222;
+}
+.popupbox .introduce-box .right .box .boxleft > *:last-child {
+    border: none;
+}
+.popupbox .introduce-box .right .box h4 {
+    font-family: 'name';
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.popupbox .introduce-box .right .box p {
+    padding-left: 1rem;
+    line-height: 1.6;
+}
+.popupbox .introduce-box .right .box .boxright {
+    border-left: 2px solid #222;
+    padding: 1rem;
+}
+/* header ==================== */
+header {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    overflow: hidden;
+    border-radius: 40px;
+    border: 1px solid #222;
+    z-index: 999;
+}
+.link {
+    font-family: 'name';
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 999;
+    background: #fff;
+    border: none;
+    color: #111;
+    cursor: pointer;
+}
+
+/* title ===================== */
+.title {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bg 1s 5s forwards;
+    overflow: hidden;
+}
+
+@keyframes bg {
+    0% {
+        background: transparent;
+        color: #111;
+    }
+
+    100% {
+        background: #111;
+        color: #f2f2f2;
+    }
+}
+
+@keyframes bgw {
+    0% {
+        background: transparent;
+    }
+
+    100% {
+        background: #fff;
+    }
+}
+
+.title .inner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #222;
+    animation: titleleft 2s 4s;
+}
+
+.title .inner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #222;
+    animation: titleright 2s 4s;
+}
+
+@keyframes titleleft {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes titleright {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.title .maintext {
+    width: 100%;
+    height: 45vh;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.title h1 {
+    font-family: 'name';
+    font-size: 6rem;
+}
+
+.title h1 span {
+    position: absolute;
+    padding-top: 1rem;
+}
+
+.title h1 span.pink::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50%;
+    background: radial-gradient(pink 5%, transparent);
+    border-radius: 50%;
+    z-index: -1;
+    animation: no 1s 1s forwards;
+}
+
+@keyframes no {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.title h1 span:nth-child(1) {
+    top: 50%;
+    left: 0;
+}
+
+.title h1 span:nth-child(2) {
+    top: 50%;
+    left: 45%;
+    animation: aa 1s 2s forwards;
+}
+
+@keyframes aa {
+    0% {
+        left: 45%;
+    }
+
+    100% {
+        left: 14%;
+    }
+}
+
+.title h1 span:nth-child(3) {
+    top: 0;
+    left: 20%;
+    animation: hh 1s 2s forwards;
+}
+
+@keyframes hh {
+    0% {
+        top: 0;
+        left: 20%;
+    }
+
+    100% {
+        top: 50%;
+        left: 28%;
+    }
+}
+
+.title h1 span:nth-child(4) {
+    top: 5%;
+    right: 20%;
+    transform: rotate(180deg);
+    animation: yy 1s 2s forwards;
+}
+
+@keyframes yy {
+    0% {
+        top: 5%;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 50%;
+        right: 47%;
+        transform: rotate(0deg);
+    }
+}
+
+.title h1 span:nth-child(5) {
+    top: 100%;
+    left: 45%;
+    animation: uu 1s 2s forwards;
+}
+
+@keyframes uu {
+    0% {
+        top: 100%;
+        left: 45%;
+    }
+
+    100% {
+        top: 50%;
+        left: 56%;
+    }
+}
+
+.title h1 span:nth-child(6) {
+    top: 50%;
+    right: 0;
+    animation: nn 1s 2s forwards;
+}
+
+@keyframes nn {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 18%;
+    }
+}
+
+.title h3 {
+    opacity: 0;
+    font-size: 2rem;
+    animation: opacity 1s 2s forwards;
+}
+br {
+    display: none;
+}
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.title h3 strong {
+    color: #FD2D2D;
+}
+
+.title p {
+    opacity: 0;
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1rem;
+    padding-left: 3px;
+    animation: opacity 1s 2.5s forwards;
+}
+
+.title button {
+    font-family: 'Paperozi';
+    opacity: 0;
+    padding: 7px 25px;
+    border: none;
+    font-style: italic;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px #999;
+    margin-right: 10px;
+}
+
+.title .text {
+    font-family: 'Paperozi';
+    margin-top: -2rem;
+}
+
+.title .text>*:nth-child(3) {
+    animation: opacity 1s 3s forwards;
+}
+
+.title .text>*:nth-child(4) {
+    animation: opacity 1s 3.5s forwards;
+}
+
+.title .text>*:nth-child(5) {
+    animation: opacity 1s 4s forwards;
+}
+
+/* www ================= */
+.www .inner {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.why,
+.what,
+.welcome {
+    padding: 5rem 0;
+}
+
+.www-title {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    padding-top: 60px;
+    align-items: center;
+    letter-spacing: 2px;
+    gap: 150px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 99;
+}
+
+.www-title h2 {
+    font-family: 'name';
+    font-size: 5rem;
+    font-style: italic;
+}
+
+.www-title .fixred {
+    color: #FD2D2D;
+}
+
+.www-title .w {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.www-title .w::before {
+    font-family: 'name';
+    content: 'w';
+    color: #222;
+    opacity: 0.1;
+    font-size: 12rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: -30px;
+    left: -100px;
+    z-index: -1;
+}
+
+.www-title .w::after {}
+
+.www-title .sub {
+    font-family: 'Paperozi';
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.change-text {
+    white-space: nowrap;
+}
+
+/* w common ============== */
+.wtitle {
+    font-family: 'Paperozi';
+    font-size: 2rem;
+    padding: 1rem 0;
+    white-space: nowrap;
+}
+.wtext {
+    font-family: 'Paperozi';
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.talk {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+}
+/* why =================== */
+.why {
+    display: flex;   
+    justify-content: space-between;
+}
+.why > * {
+    width: 45%;
+}
+
+.why .right a {
+    display: inline-block;
+    width: 150px;
+    border-radius: 30px;
+    margin-left: 10px;
+    background-color: #f2f2f2;
+    transition: all .3s;
+    padding-left: 27px;
+}
+.why .right a:hover {
+    background-color: #111;
+    color: #f2f2f2;
+}
+.why .right .imgbox {
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+    margin: 1rem 0;
+    border: 2px solid #111;
+    background: url('../images/blog.png') no-repeat center top/100%;
+    transition: all 2s;
+}
+.why .right .imgbox:hover {
+    background: url('../images/blog.png') no-repeat center bottom/100%;
+}
+.ball {
+    max-width: 600px;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    margin: 1rem 0;
+}
+/* what ================== */
+
+.cardbox {
+    margin: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cardbox .card {
+    width: 30%;
+    border-radius: 30px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #222;
+    cursor: pointer;
+    overflow: hidden;
+}
+.cardbox .card h4 {
+    font-family: 'name';
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transform: translateY(20%);
+    transition: all .5s;
+}
+.cardbox .card:hover h4{
+    transform: translateY(0%);
+}
+.cardbox .card p {
+    font-family: 'Paperozi';
+    padding: 1rem 0;
+    font-size: 1.2rem;
+     transform: translateY(40%);
+    transition: all .5s;
+}
+.cardbox .card:hover p{
+    transform: translateY(0%);
+}
+.cardbox .card .icon {
+    display: flex;
+    font-family: 'name';
+    justify-content: center;
+    gap: 20px;
+    font-size: 2rem;
+    margin-top: 1rem;
+    transform: translateY(160%);
+    transition: all .5s;
+}
+.cardbox .card .icon .tool {
+    color: #f2f2f2;
+    width: 70px;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #111;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+}
+
+.cardbox .card:hover .icon {
+    transform: translateY(0%);
+}
+
+/* welcome ============= */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+
+}
+.welcome > * {
+    width: 50%;
+}
+.welcome .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+.welcome .right {
+    text-align: center;
+}
+
+.view-area {
+    opacity: 0;
+    visibility: hidden;
+ }
+.view-area.active { 
+    opacity: 1;
+    visibility: visible;
+ }
+
+.portfolio-list li {
+    padding: 1rem 0;
+    font-family: 'Paperozi';
+    font-size: 1.2rem;
+}
+
+.portfolio-list a {
+    color: #333;
+    text-decoration: none;
+}
+
+.view-toggle {
+    text-align: right;
+}
+.view-toggle button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    opacity: 0.2;
+}
+.view-toggle button:nth-child(1) {
+    margin-right: 10px;
+}
+.view-toggle button img {
+    width: 30px;
+}
+.view-toggle .active {
+    opacity: 1;
+}
+
+.portfolio-thumb {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.portfolio-thumb a {
+    width: 30%;
+    padding-top: 15.4%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-thumb a img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+.portfolio-thumb a:hover img {
+    transform: scale(1.05);
+}
+.portfolio-list {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.portfolio-list > * {
+    width: 30%;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
+    border-radius: 20px;
+}
+
+
+.pagination {
+    font-family: 'name';
+    margin-top: 20px;
+}
+
+.pagination span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination .active {
+    font-weight: bold;
+}
+
+
+
+/* footer =============== */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+}
