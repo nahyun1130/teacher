@@ -264,7 +264,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: bg 1s 5s forwards;
+    animation: bg 1s 7s forwards;
     overflow: hidden;
 }
 
@@ -297,7 +297,7 @@ header {
     width: 0%;
     height: 1px;
     background-color: #222;
-    animation: titleleft 2s 4s;
+    animation: titleleft 2s 5s;
 }
 
 .title .inner::after {
@@ -307,7 +307,7 @@ header {
     width: 0%;
     height: 1px;
     background-color: #222;
-    animation: titleright 2s 4s;
+    animation: titleright 2s 5s;
 }
 
 @keyframes titleleft {
@@ -467,7 +467,7 @@ header {
 .title h3 {
     opacity: 0;
     font-size: 2rem;
-    animation: opacity 1s 2s forwards;
+    animation: opacity 1s 2.5s forwards;
 }
 br {
     display: none;
@@ -482,7 +482,7 @@ br {
     }
 }
 
-.title h3 strong {
+strong {
     color: #FD2D2D;
 }
 
@@ -491,7 +491,7 @@ br {
     font-size: 1.2rem;
     margin: 0.5rem 0 1rem;
     padding-left: 3px;
-    animation: opacity 1s 2.5s forwards;
+    animation: opacity 1s 3s forwards;
 }
 
 .title button {
@@ -512,15 +512,15 @@ br {
 }
 
 .title .text>*:nth-child(3) {
-    animation: opacity 1s 3s forwards;
-}
-
-.title .text>*:nth-child(4) {
     animation: opacity 1s 3.5s forwards;
 }
 
-.title .text>*:nth-child(5) {
+.title .text>*:nth-child(4) {
     animation: opacity 1s 4s forwards;
+}
+
+.title .text>*:nth-child(5) {
+    animation: opacity 1s 4.5s forwards;
 }
 
 /* www ================= */
@@ -665,10 +665,25 @@ br {
 }
 .cardbox .card h4 {
     font-family: 'name';
+    display: inline-block;
     font-size: 2rem;
     margin-bottom: 1rem;
     transform: translateY(20%);
     transition: all .5s;
+    position: relative;
+}
+.cardbox .card h4::before {
+    content: '';
+    width: 0%;
+    position: absolute;
+    height: 50%;
+    bottom: 0; left: 0%;
+    background-color: #ffc1c1;
+    z-index: -1;
+    transition: all .5s;
+}
+.cardbox .card:hover h4::before {
+    width: 100%;
 }
 .cardbox .card:hover h4{
     transform: translateY(0%);
